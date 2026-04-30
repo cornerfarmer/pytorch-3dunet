@@ -1,0 +1,35 @@
+package:
+  name: pytorch3dunet
+  version: "1.5.1"
+
+source:
+  path: ..
+
+build:
+  script: pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  build:
+    - python 
+    - pip
+    - setuptools
+
+  run:
+    - python 
+    - pytorch
+    - tensorboard
+    - tqdm
+    - setuptools
+    - h5py
+    - scipy
+    - scikit-image
+    - pyyaml
+
+about:
+  homepage: https://github.com/wolny/pytorch-3dunet
+  license: MIT
+
+tests:
+  - python:
+      imports:
+        - pytorch3dunet
