@@ -1,0 +1,24 @@
+[workspace] 
+channels = ["conda-forge"]
+preview = ["pixi-build"]
+
+
+[package]
+name = "pytorch3dunet"
+version = "0.1.0"
+
+[package.host-dependencies] 
+hatchling = "*"
+
+[package.run-dependencies] 
+pytorch = "*"
+tensorboard = "*"
+tqdm = "*"
+setuptools = "*"
+h5py = "*"
+scipy = "*"
+scikit-image = "*"
+pyyaml = "*"
+
+[package.build]
+backend = { name = "pixi-build-python", version = "*"}
